@@ -1,2 +1,2 @@
-# Simple-NN-Toolbox
-Simple neural network toolbox
+# Regn Prediktor
+Neuralt nätverk som predikterar om det kommer regna de kommande timmarna
