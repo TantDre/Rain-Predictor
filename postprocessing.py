@@ -2,6 +2,7 @@
 import matplotlib.pyplot as plt
 import numpy as np
 
+# ---------------- plotData(x, y) ----------------
 # Plot data
 def plotData(x, y):
   # Plot
@@ -9,6 +10,7 @@ def plotData(x, y):
   plt.plot(x, y, '.')
   plt.show()
 
+# ---------------- printStats(x, y) ----------------
 # Print stats 
 def printStats(x, y):
   # Print
