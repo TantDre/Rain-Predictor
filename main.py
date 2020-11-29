@@ -6,7 +6,7 @@ from postprocessing import plotData, printStats
 
 # ---------------- Main ----------------
 # Pre-processing of data
-x, y = getData()
+x, y, x_norm, y_bool = getData()
 
 # Print
 printStats(x, y)

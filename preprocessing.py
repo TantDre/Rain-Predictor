@@ -10,9 +10,12 @@ def getData():
 
   # Normalize data
   x_norm = normalizeData(x)
-  
+
+  # Convert true value
+  y_bool = boolRain(y)
+
   # Return
-  return x_norm, y
+  return x, y, x_norm, y_bool
 
 # ---------------- DataPreProcessing() ----------------
 # Reads and reduces the raw data
@@ -82,3 +85,20 @@ def normalizeData(x):
 
   # Return
   return x_norm
+
+# ---------------- boolRain(x) ----------------
+# Converts mm rain to true or false
+def boolRain(y):
+  # Variables
+  rainLimit = 1
+  y_bool = []
+
+  # Convert
+  for days in y:
+    if days > rainLimit:
+      y_bool.append(1)
+    else:
+      y_bool.append(0)
+
+  # Return
+  return y_bool
