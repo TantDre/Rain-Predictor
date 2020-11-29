@@ -5,11 +5,17 @@ import csv
 # ---------------- getData() ----------------
 # Return the pre-processed data
 def getData():
+  # Get data
   x, y = DataPreProcessing()
-  return x, y
+
+  # Normalize data
+  x_norm = normalizeData(x)
+  
+  # Return
+  return x_norm, y
 
 # ---------------- DataPreProcessing() ----------------
-# Reads and collects the raw data
+# Reads and reduces the raw data
 def DataPreProcessing():
   # Variables
   TimeVec = []
@@ -63,3 +69,16 @@ def DataPreProcessing():
 
   # Return
   return TempVecRed, RainVecRed
+
+# ---------------- normalizeData(X) ----------------
+# Normalizes the data
+def normalizeData(x):
+  # Variables
+  x_min = min(x)
+  x_max = max(x)
+
+  # Normalize
+  x_norm = (x - x_min) / (x_max - x_min)
+
+  # Return
+  return x_norm
