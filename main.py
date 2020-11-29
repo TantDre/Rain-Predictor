@@ -1,17 +1,16 @@
 # ---------------- Import ----------------
-from preprocessing import DataPreProcessing
-from postprocessing import PlotData
-import numpy as np
+from preprocessing import getData
+from postprocessing import plotData, printStats
+#import numpy as np
 #import tensorflow as tf
 
 # ---------------- Main ----------------
 
 # Pre-processing of data
-x = DataPreProcessing()
+x, y = getData()
 
 # Print
-print("The mean temperature is: ")
-print(np.mean(x))
+printStats(x, y)
 
 # Plot data
-PlotData(x)
+plotData(x, y)

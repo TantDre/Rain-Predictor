@@ -1,6 +1,12 @@
 # ---------------- Import ----------------
 import csv
 
+# Return the pre-processed data
+def getData():
+  x, y = DataPreProcessing()
+  return x, y
+
+# Reads and collects the raw data
 def DataPreProcessing():
   # ---------------- Variables ----------------
   TimeVec = []
@@ -9,6 +15,7 @@ def DataPreProcessing():
   PresVec = []
   WindSpeVec = []
   WindDirVec = []
+  RainVec = []
 
   # ---------------- Read csv ----------------
   with open('Data/Data_2017_2018.csv', newline='') as csvfile:
@@ -22,8 +29,9 @@ def DataPreProcessing():
       PresVec.append(float(row['Absolute Pressure(mmHg)']))
       WindSpeVec.append(float(row['Wind Speed(m/s)']))
       WindDirVec.append(row['Wind Direction'])
+      RainVec.append(float(row['24 Hour Rainfall(mm)']))
 
-  # ---------------- Operations ----------------
-  
-  # Test
-  return(TempVec)
+  # ---------------- Reduce data ----------------
+
+  # Return
+  return TempVec, RainVec
