@@ -12,7 +12,7 @@ def DataPreProcessing():
   WindDirVec = []
 
   # ---------------- Read csv ----------------
-  with open('Data/UTF8_2017_2018.csv', newline='') as csvfile:
+  with open('Data/Data_2017_2018.csv', newline='') as csvfile:
     dataFile = csv.DictReader(csvfile, delimiter='\t')
 
     # Loop file
