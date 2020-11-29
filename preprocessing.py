@@ -24,6 +24,6 @@ def DataPreProcessing():
       WindDirVec.append(row['Wind Direction'])
 
   # ---------------- Operations ----------------
-
+  
   # Test
   return(TempVec)
