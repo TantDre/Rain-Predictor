@@ -1,10 +1,18 @@
 # ---------------- Import ----------------
 from preprocessing import DataPreProcessing
+import matplotlib.pyplot as plt
+import numpy as np
 #import tensorflow as tf
-#import numpy as np
 
 # ---------------- Main ----------------
+
+# Data
 x = DataPreProcessing()
 
-# Test
-print(x)
+# Print
+print("The mean temperature is: ")
+print(np.mean(x))
+
+# Plot
+plt.plot(x)
+plt.show()

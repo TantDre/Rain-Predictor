@@ -1,5 +1,4 @@
 # ---------------- Import ----------------
-import numpy as np
 import csv
 
 def DataPreProcessing():
@@ -27,4 +26,4 @@ def DataPreProcessing():
   # ---------------- Operations ----------------
 
   # Test
-  return(np.mean(TempVec))
+  return(TempVec)
