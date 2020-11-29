@@ -5,7 +5,6 @@ from postprocessing import plotData, printStats
 #import tensorflow as tf
 
 # ---------------- Main ----------------
-
 # Pre-processing of data
 x, y = getData()
 
