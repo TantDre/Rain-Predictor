@@ -43,11 +43,27 @@ elif menu == 2:
     # Load model
     model = tf.keras.models.load_model("SimpelRainModel.h5")
 
-    # Values
-    x, y = getData()
+    # Test data
+    print("Enter temperature (C): ")
+    x1 = float(input())
+
+    print("Enter humidity (%): ")
+    x2 = float(input())
+
+    print("Enter pressure (kPa): ")
+    x3 = float(input()) * 7.50062
+
+    # Normalize
+    x1n = (x1 - (-11)) / (22 - (-11))
+    x2n = (x1 - 18) / (79 - 18)
+    x3n = (x1 - 733) / (788 - 733)
+
+    # Formate
+    x_vec = np.array(([x1n], [x2n], [x3n])).T
 
     # Results
-    print(model.predict(x))
+    print("The probability of rain today is: ")
+    print(str(round(model.predict(x_vec)[0][0]*100)) + " %")
 
 else:
     print("Error")
