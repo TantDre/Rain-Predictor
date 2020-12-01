@@ -8,7 +8,7 @@ import sys
 
 # ---------------- Main ----------------
 print("---------------- Regn-Prediktor ----------------")
-print("Train \t (1)\nTest\t (2)")
+print("Train \t (1)\nTest\t (2)\nUse\t (3)")
 menu = int(input())
 
 if menu == 1:
@@ -28,7 +28,7 @@ if menu == 1:
                   metrics=['binary_accuracy'])
 
     # Train
-    fitModel = model.fit(x, y, epochs=300, verbose=1)
+    fitModel = model.fit(x, y, epochs=500, verbose=1)
 
     # Results
     loss_data = fitModel.history["loss"]
@@ -36,10 +36,25 @@ if menu == 1:
     plt.title("Training Loss")
     plt.show()
 
+    acc_data = fitModel.history["binary_accuracy"]
+    plt.plot(acc_data)
+    plt.title("Accuracy")
+    plt.show()
+
     # Save model
     model.save("SimpelRainModel.h5")
 
 elif menu == 2:
+    # Load model
+    model = tf.keras.models.load_model("SimpelRainModel.h5")
+
+    # Test data
+    x, y = getData()
+
+    # Results
+    print(model.predict(x))
+
+elif menu == 3:
     # Load model
     model = tf.keras.models.load_model("SimpelRainModel.h5")
 
