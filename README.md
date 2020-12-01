@@ -1,8 +1,8 @@
 # Regn-Prediktor
 Neuralt nätverk som predikterar om det kommer regna under dagen med hjälp av data från en väderstation.  
   
-Input: Temperatur, relativ fuktighet och lufttryck 
-Outout: Risken för regn  
+Input: Temperatur, relativ fuktighet och lufttryck  
+Output: Risken för regn  
 
 # Prestanda
 Neuralt nätverk med 1 lager och 3 noder, tränad under 500 epoker.  
