@@ -26,4 +26,5 @@ model.compile(loss='mean_squared_error',
               optimizer='adam',
               metrics=['binary_accuracy'])
 
-model.summary()
+# Train
+history = model.fit(x, y, epochs=300, verbose=1)
