@@ -7,7 +7,7 @@ import pandas as pd
 import sys
 
 # ---------------- Main ----------------
-print("---------------- Regn-Prediktor ----------------")
+print("---------------- Rain-Predictor ----------------")
 print("Train \t (1)\nTest\t (2)\nUse\t (3)")
 menu = int(input())
 
