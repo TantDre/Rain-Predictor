@@ -1,4 +1,4 @@
-NO.	Time	Interval	Indoor Temperature(°C)	Indoor Humidity(%)	Outdoor Temperature(°C)	Outdoor Humidity(%)	Relative Pressure(mmHg)	Absolute Pressure(mmHg)	Wind Speed(m/s)	Gust(m/s)	Wind Direction	DewPoint(°C)	WindChill(°C)	Hour Rainfall(mm)	24 Hour Rainfall(mm)	Week Rainfall(mm)	Month Rainfall(mm)	Total Rainfall(mm)
+NO.	Time	Interval	Indoor Temperature(C)	Indoor Humidity(%)	Outdoor Temperature(C)	Outdoor Humidity(%)	Relative Pressure(mmHg)	Absolute Pressure(mmHg)	Wind Speed(m/s)	Gust(m/s)	Wind Direction	DewPoint(C)	WindChill(°C)	Hour Rainfall(mm)	24 Hour Rainfall(mm)	Week Rainfall(mm)	Month Rainfall(mm)	Total Rainfall(mm)
  1	 2017-07-18 22:10:17	 120	 32.0	 35	 21.0	 25	 766.9	 761.6	 2.7	 3.7	 S	 0.2	 19.6	 0.00	 0.00	 0.00	 0.00	 0.00
  2	 2017-07-19 00:10:17	 120	 32.1	 34	 18.9	 34	 767.0	 761.7	 1.7	 2.7	 S	 2.7	 18.9	 0.00	 0.00	 0.00	 0.00	 0.00
  3	 2017-07-19 02:10:17	 120	 29.2	 39	 13.8	 52	 767.3	 762.0	 0.7	 1.0	 E	 4.1	 13.8	 0.00	 0.00	 0.00	 0.00	 0.00
