@@ -13,3 +13,17 @@ import sys
 # ---------------- Main ----------------
 # Pre-processing of data
 x, y = getData()
+
+# Model
+model = tf.keras.models.Sequential()
+
+# Layers
+model.add(tf.keras.layers.Dense(3, input_dim=3, activation='relu'))
+model.add(tf.keras.layers.Dense(1, activation='sigmoid'))
+
+# Complie
+model.compile(loss='mean_squared_error',
+              optimizer='adam',
+              metrics=['binary_accuracy'])
+
+model.summary()
