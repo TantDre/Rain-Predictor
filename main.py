@@ -28,3 +28,9 @@ model.compile(loss='mean_squared_error',
 
 # Train
 history = model.fit(x, y, epochs=300, verbose=1)
+
+# Results
+loss_data = hist.history["loss"]
+plt.plot(loss_data)
+plt.title("Training Loss")
+plt.show()
