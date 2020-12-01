@@ -50,13 +50,13 @@ elif menu == 2:
     print("Enter humidity (%): ")
     x2 = float(input())
 
-    print("Enter pressure (kPa): ")
-    x3 = float(input()) * 7.50062
+    print("Enter pressure (mmhg): ")
+    x3 = float(input())
 
     # Normalize
     x1n = (x1 - (-11)) / (22 - (-11))
-    x2n = (x1 - 18) / (79 - 18)
-    x3n = (x1 - 733) / (788 - 733)
+    x2n = (x2 - 18) / (79 - 18)
+    x3n = (x3 - 733) / (788 - 733)
 
     # Formate
     x_vec = np.array(([x1n], [x2n], [x3n])).T
