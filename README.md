@@ -1,10 +1,10 @@
-# Regn-Prediktor
-Neuralt nätverk som predikterar om det kommer regna under dagen med hjälp av data från en väderstation.  
+# Rain-Predictor
+Neural network that predicts if it will rain during the day using data from a weather station.    
   
-Input: Temperatur, relativ fuktighet och lufttryck  
-Output: Risken för regn  
+Input: Temperature, relative humidity och ambient pressure
+Output: Risk of rain  
 
-# Prestanda V1
-Neuralt nätverk med 2 lager och 3 noder i varje, tränad under 600 epoker.  
+# Performance V1
+Neural network with 2 hidden layers each with 3 nodes. The network has been trained for 600 epochs.  
 ![Loss](https://github.com/TantDre/Regn-Prediktor/blob/master/Plots/Loss.png?raw=true)  
 ![Acc](https://github.com/TantDre/Regn-Prediktor/blob/master/Plots/Acc.png?raw=true)  
