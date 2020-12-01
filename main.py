@@ -20,6 +20,7 @@ if menu == 1:
 
     # Layers
     model.add(tf.keras.layers.Dense(3, input_dim=3, activation='relu'))
+    model.add(tf.keras.layers.Dense(3, activation='relu'))
     model.add(tf.keras.layers.Dense(1, activation='sigmoid'))
 
     # Complie
@@ -28,7 +29,7 @@ if menu == 1:
                   metrics=['binary_accuracy'])
 
     # Train
-    fitModel = model.fit(x, y, epochs=500, verbose=1)
+    fitModel = model.fit(x, y, epochs=600, verbose=1)
 
     # Results
     loss_data = fitModel.history["loss"]
@@ -42,11 +43,11 @@ if menu == 1:
     plt.show()
 
     # Save model
-    model.save("SimpelRainModel.h5")
+    model.save("RainModel.h5")
 
 elif menu == 2:
     # Load model
-    model = tf.keras.models.load_model("SimpelRainModel.h5")
+    model = tf.keras.models.load_model("RainModel.h5")
 
     # Test data
     x, y = getData()
@@ -56,7 +57,7 @@ elif menu == 2:
 
 elif menu == 3:
     # Load model
-    model = tf.keras.models.load_model("SimpelRainModel.h5")
+    model = tf.keras.models.load_model("RainModel.h5")
 
     # Test data
     print("Enter temperature (C): ")

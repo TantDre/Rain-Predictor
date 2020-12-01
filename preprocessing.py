@@ -105,7 +105,7 @@ def normalizeData(x):
 
 def boolRain(y):
     # Variables
-    rainLimit = 1
+    rainLimit = 2
     y_bool = []
 
     # Convert
