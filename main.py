@@ -1,36 +1,53 @@
 # ---------------- Import ----------------
-# Files
 from preprocessing import getData
-
-# Libraries
 import matplotlib.pyplot as plt
 import tensorflow as tf
 import numpy as np
 import pandas as pd
 import sys
 
-
 # ---------------- Main ----------------
-# Pre-processing of data
-x, y = getData()
+print("---------------- Regn-Prediktor ----------------")
+print("Train \t (1)\nTest\t (2)")
+menu = int(input())
 
-# Model
-model = tf.keras.models.Sequential()
+if menu == 1:
+    # Pre-processing of data
+    x, y = getData()
 
-# Layers
-model.add(tf.keras.layers.Dense(3, input_dim=3, activation='relu'))
-model.add(tf.keras.layers.Dense(1, activation='sigmoid'))
+    # Model
+    model = tf.keras.models.Sequential()
 
-# Complie
-model.compile(loss='mean_squared_error',
-              optimizer='adam',
-              metrics=['binary_accuracy'])
+    # Layers
+    model.add(tf.keras.layers.Dense(3, input_dim=3, activation='relu'))
+    model.add(tf.keras.layers.Dense(1, activation='sigmoid'))
 
-# Train
-history = model.fit(x, y, epochs=300, verbose=1)
+    # Complie
+    model.compile(loss='mean_squared_error',
+                  optimizer='adam',
+                  metrics=['binary_accuracy'])
 
-# Results
-loss_data = hist.history["loss"]
-plt.plot(loss_data)
-plt.title("Training Loss")
-plt.show()
+    # Train
+    fitModel = model.fit(x, y, epochs=300, verbose=1)
+
+    # Results
+    loss_data = fitModel.history["loss"]
+    plt.plot(loss_data)
+    plt.title("Training Loss")
+    plt.show()
+
+    # Save model
+    model.save("SimpelRainModel.h5")
+
+elif menu == 2:
+    # Load model
+    model = tf.keras.models.load_model("SimpelRainModel.h5")
+
+    # Values
+    x, y = getData()
+
+    # Results
+    print(model.predict(x))
+
+else:
+    print("Error")
