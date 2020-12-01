@@ -105,8 +105,13 @@ def normalizeData(x):
 
 def boolRain(y):
     # Variables
-    rainLimit = 2
     y_bool = []
+
+    # Limit
+    if max(y) <= 1:         # if %
+        rainLimit = 0.5
+    else:
+        rainLimit = 2       # if mm
 
     # Convert
     for days in y:

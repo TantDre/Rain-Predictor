@@ -1,5 +1,5 @@
 # ---------------- Import ----------------
-from preprocessing import getData
+from preprocessing import getData, boolRain
 import matplotlib.pyplot as plt
 import tensorflow as tf
 import numpy as np
@@ -53,7 +53,13 @@ elif menu == 2:
     x, y = getData()
 
     # Results
-    print(model.predict(x))
+    pred = model.predict(x)
+
+    # Plot
+    plt.plot(y)
+    plt.plot(boolRain(pred))
+    plt.title("Rain Plot")
+    plt.show()
 
 elif menu == 3:
     # Load model
