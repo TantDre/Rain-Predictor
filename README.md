@@ -1,7 +1,7 @@
 # Rain-Predictor
 Neural network that predicts if it will rain during the day using data from a weather station.    
   
-Framework:  Tensorflow 2  
+Framework:  Tensorflow   
 Input: Temperature, relative humidity och ambient pressure  
 Output: Risk of rain  
 
